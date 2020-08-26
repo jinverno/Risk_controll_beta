@@ -1,0 +1,63 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Machine Learning Credit Pred Project </title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+
+	<div class = "content">
+		<h1> Credit Risk Score - NEW CLIENT </h1>
+      <br>
+      <br>
+      <br>
+    <form action = "/" method="POST">
+			<label> Credit</label>
+      <br>
+			<input type="text" name="parameter 1" id="parameter_1">
+			<br>
+			<br>
+			<label> Gender</label>
+      <br>
+			<input type="text" name="parameter 2" id="parameter_2">
+			<br>
+      •	1 - Male  ,  2 - Female
+			<br>
+      <br>
+			<label> Education</label>
+      <br>
+			<input type="text" name="parameter 3" id="parameter_3">
+			<br>
+      •	1 - Graduate school , 2 - University , 3 - high school , 4 - Others
+			<br>
+      <br>
+			<label> Marriage</label>
+      <br>
+			<input type="text" name="parameter 4" id="parameter_4">
+			<br>
+      •	1 - Married , 2 - Single , 3 - Others
+			<br>
+      <br>
+      <label> Age</label>
+      <br>
+      <input type="text" name="parameter 5" id="parameter_5">
+      <br>
+      <br>
+
+			<input type="submit" value="Run Model">
+		</form>
+      <br>
+      <br>
+    {% for prediction in predictions%}
+    	<h2> The Probability of default next month is : {{prediction}} </h2>
+
+    	{% endfor%}
+	</div>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

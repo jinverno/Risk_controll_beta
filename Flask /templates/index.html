@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Ml Risk Controll</title>
+
+    <!-- Icons font CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="{{ url_for('static', filename='main.css')}}"
+    rel="stylesheet" media="all">
+</head>
+
+<body>
+
+
+    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+
+        <div class="wrapper wrapper--w680">
+            <img src="static/bg-head-02.jpg" alt="">
+            <div class="card card-1">
+                <div>
+                </div>
+                <div class="card-body">
+                    <h2 class="title">Credit Risk Score</h2>
+
+                    <form class="form" method="POST">
+                                <div class="jumbotron">
+                                <div class="form-group credit" >
+                                    <h6>Credit</h6>
+                                    <input class="form-control" placeholder="Input your credit limit in NT$" type="text" name="parameter 1" id="parameter_1">
+                                    </div>
+                                    <div class="form-group gender"> 
+                                        <h6>Gender</h6>
+                                    <select class="form-control" name="parameter 2" id="parameter_2">
+                                        <option>Select your gender</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        </select>
+                                    </div>
+                                        <div class="form-group education" >
+                                            <h6>Education</h6>
+                                            <select class="form-control" name="parameter 3" id="parameter_3">
+                                                <option>Education level</option>
+                                                <option>Graduate School</option>
+                                                <option>University</option>
+                                                <option>High School</option>
+                                                <option>Others</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group marriage">
+                                            <h6>Marriage</h6>
+                                            <select class="form-control" name="parameter 4" id="parameter_4">
+                                                <option disabled="disabled" selected="selected">Marriage Status</option>
+                                                <option>Married</option>
+                                                <option>Single</option>
+                                                <option>Others</option>
+                                            </select>
+                                        </div>
+                                        <div class="age">
+                                        <h6>Age</h6>
+                                        <input class="form-control" placeholder="Input your age" type="text" name="parameter 5" id="parameter_5">
+                                        </div>
+                                        <div class="p-t-20">
+                                            <button value="Run Model" class="btn btn-secondary" type="submit">Run Model</button>
+                                
+                                        </div>
+                                    </div>
+                                    </form>
+
+                                    {% for prediction in predictions%}
+                                        <h2> The Probability of default next month is : {{prediction}} </h2>
+                                    {% endfor%}
+
+                                        <script src="js/scripts.js">
+                                         
+                                    </script>
+                                    </div>
+                            </div>
+                    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
