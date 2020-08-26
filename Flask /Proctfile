@@ -7,4 +7,5 @@ Created on Wed Aug 26 18:26:22 2020
 """
 
 web: gunicorn app:app
+release: python manage.py db upgrade
 
